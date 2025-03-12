@@ -19,20 +19,7 @@ import importlib
 import logging
 from colorama import init, Fore, Style
 import readline
-
-# Holds methods of the application from modules imported to the framework for Interactive CLI
-#    Useful when including functionality from aexternal modules imported into the framework
-#    Exposed API or other use cases where integrations need to be created customized and or modified
-#    Can be expanded by including additional modules
-
-application = {}
-
-# Holds menu entries. Each entry is a dictionary with keys:
-#   'category': A list representing the menu hierarchy.
-#   'name': The display name of the module.
-#   'help': A help string.
-#   'callback': The function (or callable) to run when selected.
-menu_registry = []
+from registry import application, menu_registry
 
 # Initialize colorama (colors will auto-reset)
 init(autoreset=True)
